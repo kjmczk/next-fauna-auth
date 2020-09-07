@@ -1,0 +1,21 @@
+{
+  "name": "nextjs-faunadb-auth",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "cookie": "^0.4.1",
+    "faunadb": "^2.14.2",
+    "graphql": "^15.3.0",
+    "graphql-request": "^3.0.0",
+    "next": "9.5.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-hook-form": "^6.3.0",
+    "swr": "^0.3.0"
+  }
+}

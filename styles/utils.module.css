@@ -1,0 +1,50 @@
+.form {
+  background-color: #eee;
+  border-radius: 4px;
+  padding: 2rem;
+}
+
+.form label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.form input[type='text'],
+.form input[type='email'],
+.form input[type='password'] {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin: 0.25rem 0 1rem;
+}
+
+.form input[type='checkbox'] {
+  transform: scale(2);
+  margin-left: 1rem;
+}
+
+.submit {
+  margin-top: 1rem;
+  text-align: right;
+}
+
+.submit button {
+  background-color: #0070f3;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.error,
+.errorMessage {
+  color: #d32f2f;
+}
+
+.error {
+  display: block;
+  margin-bottom: 1rem;
+}

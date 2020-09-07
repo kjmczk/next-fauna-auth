@@ -1,0 +1,15 @@
+.todo {
+  padding: 0.5rem;
+}
+
+.edit {
+  margin: 0 0.5rem;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  padding: 0 0.5rem;
+}
+
+.delete {
+  color: #d32f2f;
+  cursor: pointer;
+}
