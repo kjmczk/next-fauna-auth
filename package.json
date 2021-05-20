@@ -9,13 +9,13 @@
   },
   "dependencies": {
     "cookie": "^0.4.1",
-    "faunadb": "^2.14.2",
-    "graphql": "^15.3.0",
-    "graphql-request": "^3.0.0",
-    "next": "9.5.1",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-hook-form": "^6.3.0",
-    "swr": "^0.3.0"
+    "faunadb": "^4.2.0",
+    "graphql": "^15.5.0",
+    "graphql-request": "^3.4.0",
+    "next": "10.2.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hook-form": "^7.6.2",
+    "swr": "^0.5.6"
   }
 }
