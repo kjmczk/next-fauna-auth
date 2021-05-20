@@ -9,7 +9,11 @@ const Login = () => {
 
   const [errorMessage, setErrorMessage] = useState('');
 
-  const { handleSubmit, register, errors } = useForm();
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm();
 
   const onSubmit = handleSubmit(async (formData) => {
     if (errorMessage) setErrorMessage('');
@@ -43,8 +47,7 @@ const Login = () => {
           <label>Email</label>
           <input
             type="email"
-            name="email"
-            ref={register({ required: 'Email is required' })}
+            {...register('email', { required: 'Email is required' })}
           />
           {errors.email && (
             <span role="alert" className={utilStyles.error}>
@@ -57,8 +60,7 @@ const Login = () => {
           <label>Password</label>
           <input
             type="password"
-            name="password"
-            ref={register({ required: 'Password is required' })}
+            {...register('password', { required: 'Password is required' })}
           />
           {errors.password && (
             <span role="alert" className={utilStyles.error}>

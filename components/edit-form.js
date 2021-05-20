@@ -10,7 +10,12 @@ const EditForm = ({ defaultValues, id, token }) => {
 
   const [errorMessage, setErrorMessage] = useState('');
 
-  const { handleSubmit, register, reset, errors } = useForm({
+  const {
+    handleSubmit,
+    register,
+    reset,
+    formState: { errors },
+  } = useForm({
     defaultValues: {
       ...defaultValues,
     },
@@ -54,8 +59,7 @@ const EditForm = ({ defaultValues, id, token }) => {
           <label>Task</label>
           <input
             type="text"
-            name="task"
-            ref={register({ required: 'Task is required' })}
+            {...register('task', { required: 'Task is required' })}
           />
           {errors.task && (
             <span role="alert" className={utilStyles.error}>
@@ -66,7 +70,7 @@ const EditForm = ({ defaultValues, id, token }) => {
 
         <div>
           <label>Completed</label>
-          <input type="checkbox" name="completed" ref={register()} />
+          <input type="checkbox" {...register('completed')} />
           {errors.completed && (
             <span role="alert" className={utilStyles.error}>
               {errors.completed.message}

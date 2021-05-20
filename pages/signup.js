@@ -9,7 +9,12 @@ const Signup = () => {
 
   const [errorMessage, setErrorMessage] = useState('');
 
-  const { handleSubmit, register, watch, errors } = useForm();
+  const {
+    handleSubmit,
+    register,
+    watch,
+    formState: { errors },
+  } = useForm();
 
   const onSubmit = handleSubmit(async (formData) => {
     if (errorMessage) setErrorMessage('');
@@ -43,9 +48,8 @@ const Signup = () => {
           <label>Email</label>
           <input
             type="email"
-            name="email"
             placeholder="e.g. john@example.com"
-            ref={register({ required: 'Email is required' })}
+            {...register('email', { required: 'Email is required' })}
           />
           {errors.email && (
             <span role="alert" className={utilStyles.error}>
@@ -58,9 +62,8 @@ const Signup = () => {
           <label>Password</label>
           <input
             type="password"
-            name="password"
             placeholder="e.g. John-1234"
-            ref={register({ required: 'Password is required' })}
+            {...register('password', { required: 'Password is required' })}
           />
           {errors.password && (
             <span role="alert" className={utilStyles.error}>
@@ -73,9 +76,8 @@ const Signup = () => {
           <label>Confirm Password</label>
           <input
             type="password"
-            name="password2"
             placeholder="e.g. John-1234"
-            ref={register({
+            {...register('password2', {
               validate: (value) =>
                 value === watch('password') || 'Passwords do not match',
             })}

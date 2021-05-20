@@ -15,7 +15,11 @@ const New = ({ token }) => {
 
   const [errorMessage, setErrorMessage] = useState('');
 
-  const { handleSubmit, register, errors } = useForm();
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm();
 
   const onSubmit = handleSubmit(async ({ task }) => {
     if (errorMessage) setErrorMessage('');
@@ -57,9 +61,8 @@ const New = ({ token }) => {
           <label>Task</label>
           <input
             type="text"
-            name="task"
             placeholder="e.g. do something"
-            ref={register({ required: 'Task is required' })}
+            {...register('task', { required: 'Task is required' })}
           />
           {errors.task && (
             <span role="alert" className={utilStyles.error}>
