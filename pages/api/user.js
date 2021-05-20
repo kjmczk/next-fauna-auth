@@ -10,7 +10,9 @@ export default async function user(req, res) {
   }
 
   try {
-    const { ref, data } = await authClient(token).query(q.Get(q.Identity()));
+    const { ref, data } = await authClient(token).query(
+      q.Get(q.CurrentIdentity())
+    );
     res.status(200).json({ ...data, id: ref.id });
   } catch (error) {
     console.error(error);
