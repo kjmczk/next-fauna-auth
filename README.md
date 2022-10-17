@@ -2,8 +2,4 @@ This is a [Next.js](https://nextjs.org/) project with [FaunaDB](https://fauna.co
 
 ## Tutorial
 
-**Implement FaunaDB Authentication in Next.js and GraphQL App**
-
-- [Medium](https://medium.com/@kjmczk)
-- [DEV](https://dev.to/kjmczk)
-- [KJmczk](https://kjmczk.dev/blog/)
+[Implement FaunaDB Authentication in Next.js and GraphQL App](https://medium.com/technest/implement-faunadb-authentication-in-next-js-and-graphql-app-29aaca4d8d96)
